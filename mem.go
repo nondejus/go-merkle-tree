@@ -34,6 +34,7 @@ func (m *MemEngine) Hash(_ context.Context, d []byte) Hash {
 	return Hash(sum[:])
 }
 
+
 // LookupNode looks up a MerkleTree node by hash
 func (m *MemEngine) LookupNode(_ context.Context, h Hash) (b []byte, err error) {
 	return m.nodes[hex.EncodeToString(h)], nil
